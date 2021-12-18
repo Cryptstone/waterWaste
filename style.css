@@ -1,0 +1,387 @@
+html {background-color: #caf1f4; font-family: "Roboto"; padding-top: 0px;}
+
+.header {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 1.5%;
+    width: 100%;
+    background-color: skyblue;
+    opacity: 0.6;
+    color: 353535;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 7.5px;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+h1 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.dividerA {
+    height: 35vw;
+    border-right: 1px solid #252525;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+.dividerB {
+    height: 35vw;
+    border-right: 1px solid #252525;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+
+.dividerC {
+    height: 35vw;
+    border-right: 1px solid #252525;
+    position: absolute;
+    left: 75%;
+    top: 20%;
+}
+
+.statisticsDiv {
+    height: 33vw;
+    width: 18vw;
+    background-color: #cae1e4;
+    position: absolute;
+    left: 2.5%;
+    top: 20%;
+    padding: 1vw;
+    text-align: left;
+}
+
+.graphDiv {
+    height: 33vw;
+    width: 18vw;
+    background-color: #cae1e4;
+    position: absolute;
+    left: 27.5%;
+    top: 20%;
+    text-align: left;
+    padding: 1vw;
+}
+
+.supportDiv {
+    height: 33vw;
+    width: 18vw;
+    background-color: #cae1e4;
+    position: absolute;
+    left: 52.5%;
+    top: 20%;
+    text-align: left;
+    padding: 1vw;
+}
+
+.triviaDiv {
+    height: 33vw;
+    width: 18vw;
+    background-color: #cae1e4;
+    position: absolute;
+    left: 77.5%;
+    top: 20%;
+    text-align: center;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+.footer {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    height: 4.5%;
+    width: 100%;
+    background-color: skyblue;
+    opacity: 0.6;
+    color: 353535;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 7.5px;
+}
+
+.trivia {
+    position: absolute;
+    top: 25%;
+    left: 32.5%;
+    border-radius: 4px;
+    width: 8vw;
+    height: 2.5vw;
+    font-family: Roboto;
+    font-size: 1.5vw;
+    background-color: #c2dcff;
+    border: 0.5px solid #353535;
+}
+
+.zoomInButton {
+    position: absolute;
+    top: 2.5%;
+    left: 86.5%;
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid 353535;
+}
+
+.imageGallery {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.imageGallery-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:focus {
+  color: #191919;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: #191919;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #a1bee4;
+  color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.theProblem {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.theProblem-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close2 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:focus {
+  color: #191919;
+}
+
+.close2:hover {
+    color: #191919;
+    cursor: pointer;
+}
+
+.modal2-header {
+  padding: 2px 16px;
+  background-color: #a1bee4;
+  color: white;
+}
+
+.modal2-body {
+    padding: 2px 16px;
+}
+
+.goBack {
+    width: 4vw;
+    height: 2vw;
+    border-radius: 4px;
+    position: absolute;
+    top: 3.5%;
+    background-color: #c2dcff;
+}
+
+.question1 {
+    width: 25vw;
+    height: 30vw;
+    border-radius: 1vw;
+    background-color: #aae1e4;
+    position: absolute;
+    top: 20%;
+    left: 6.5%;
+    font-family: Roboto;
+    font-size: 1.5vw;
+    padding: 8px;
+    text-align: center;
+}
+
+.question2 {
+    width: 25vw;
+    height: 30vw;
+    border-radius: 1vw;
+    background-color: #aae1e4;
+    position: absolute;
+    top: 20%;
+    left: 36.5%;
+    font-family: Roboto;
+    font-size: 1.5vw;
+    padding: 8px;
+    text-align: center;
+}
+
+.question3 {
+    width: 25vw;
+    height: 30vw;
+    border-radius: 1vw;
+    background-color: #aae1e4;
+    position: absolute;
+    top: 20%;
+    left: 66.5%;
+    font-family: Roboto;
+    font-size: 1.5vw;
+    padding: 8px;
+    text-align: center;
+}
+
+.startQuiz {
+    width: 15vw;
+    height: 5vw;
+    border-radius: 0.5vw;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    border: 2px solid black;
+    font-family: Roboto;
+    font-size: 2.5vw;
+}
+
+.submitButton {
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    position: absolute;
+    left: 45%;
+    top: 85%;
+    border: 2px solid black;
+    font-family: Roboto;
+    font-size: 1.5vw;
+}
+
+.playAgainButton {
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    position: absolute;
+    left: 80.5%;
+    top: 85%;
+    border: 2px solid black;
+    font-family: Roboto;
+    font-size: 1.5vw;
+    opacity: 0;
+}
+
+.score {
+    top: 12.5%;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.scoreResults {
+    opacity: 0;
+}
+
+.scoreDisplay {
+    width: 10vw;
+    height: 2vw;
+    border-radius: 4px;
+    position: absolute;
+    left: 45vw;
+    top: 6.5vw;
+    background-color: #CFCFCF;
+    opacity: 0;
+    text-align: center;
+    padding-bottom: 1vw;
+    font-size: 1vw;
+}
+
+.problemBtn {
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    background-color: #a1bee4;
+    border: 2px solid #191919;
+    font-size: 2vw;
+    position: absolute;
+    left: 48vw;
+    top: 5vw;
+}

@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a9af0714d8.js" crossorigin="anonymous"></script>
+
+        <title>Trivia</title>
+        <div class="header"><h1>Trivia</h1></div>
+    </head>
+
+    <body>
+        <button class="goBack" onClick="location.href='index.html'"><i class="fas fa-arrow-left"></i></button>
+        <div class="footer">QuHacks 2021 - Aryan Sharma</div>
+        <div class="question1" id="question1">
+            <p><hr> Question #1<hr>• How much water does the average human drink per year?<hr>Answer choices: <br> #1: 1400 liters<br> #2: 182.5 gallons<br> #3: 767.5 cups<br>#4: 10 tons</p>
+            <input type="text" id="answer1" placeholder="Input answer..."></input>
+        </div>
+        <div class="question2" id="question2">
+            <p><hr> Question #2<hr>• What percent of the water on Earth is drinkable?<hr>Answer choices: <br> #1: 25%<br> #2: 100%<br> #3: 13.4%<br>#4: 0.4%</p>
+            <input type="text" id="answer2" placeholder="Input answer..."></input>
+        </div>
+        <div class="question3" id="question3">
+            <p><hr> Question #3<hr>• How much water is wasted in America per year?<hr>Answer choices: <br> #1: 1 billion gallons<br> #2: 4 million gallons<br> #3: 1 trillion gallons<br>#4: 2 drops</p>
+            <input type="text" id="answer3" placeholder="Input answer..."></input>
+        </div>
+        <button class="submitButton" id="submitButton" onClick="checkAnswers()">Submit</button>
+        <button class="playAgainButton" id="playAgainButton" onClick="playAgain()">Play Again</button>
+        <div class="scoreDisplay" id="scoreDisplay"></div>
+    </body>
+
+    <script>
+
+        let score = 0;
+        var submitBtn = document.getElementById("submitButton");
+        var playAgainBtn = document.getElementById("playAgainButton");
+        let q1 = document.getElementById("question1");
+        let q2 = document.getElementById("question2");
+        let q3 = document.getElementById("question3");
+        let scoreDisplay = document.getElementById("scoreDisplay");
+        function checkAnswers() {
+            let answer1Val = document.getElementById("answer1").value;
+            let answer2Val = document.getElementById("answer2").value;
+            let answer3Val = document.getElementById("answer3").value;
+
+            inputForm = '<input type="text" id="answer3" placeholder="Input answer..."></input>'
+
+            if (answer1Val == "182.5 gallons") {
+                score+=1
+                q1.innerHTML = "<hr> Question #1<hr>• How much water does the average human drink per year?<hr>Answer choices: <br> #1: 1400 liters<br> #2: 182.5 gallons<br> #3: 767.5 cups<br>#4: 10 tons<hr>CORRECT!";
+            } else if (answer1Val != "182.5 gallons") {
+                q1.innerHTML = "<hr> Question #1<hr>• How much water does the average human drink per year?<hr>Answer choices: <br> #1: 1400 liters<br> #2: 182.5 gallons<br> #3: 767.5 cups<br>#4: 10 tons<hr>INCORRECT :(";
+            }
+            if (answer2Val == "0.4%") {
+                score+=1
+                q2.innerHTML = "<hr> Question #2<hr>• What percent of the water on Earth is drinkable?<hr>Answer choices: <br> #1: 25%<br> #2: 100%<br> #3: 13.4%<br>#4: 0.4%<hr>CORRECT!";
+            } else if (answer2Val != "0.4%") {
+                q2.innerHTML = "<hr> Question #2<hr>• What percent of the water on Earth is drinkable?<hr>Answer choices: <br> #1: 25%<br> #2: 100%<br> #3: 13.4%<br>#4: 0.4%<hr>INCORRECT :(";
+            }
+            if (answer3Val == "1 trillion gallons") {
+                score+=1
+                q3.innerHTML = "<hr> Question #3<hr>• How much water is wasted in America per year?<hr>Answer choices: <br> #1: 1 billion gallons<br> #2: 4 million gallons<br> #3: 1 trillion gallons<br>#4: 2 drops<hr>CORRECT!";
+            } else if (answer3Val != "1 trillion gallons") {
+                q3.innerHTML = "<hr> Question #3<hr>• How much water is wasted in America per year?<hr>Answer choices: <br> #1: 1 billion gallons<br> #2: 4 million gallons<br> #3: 1 trillion gallons<br>#4: 2 drops<hr>INCORRECT :(";
+            }
+            submitBtn.style.left = "39.5%";
+            playAgainBtn.style.left = "50.5%";
+            playAgainBtn.style.opacity = "1";
+            scoreDisplay.style.opacity = "1";
+            if (score >= 2) {
+                scoreDisplay.innerHTML = "<p>You scored a <b>" + score + "/3</b>!</p>";
+            } else {
+                scoreDisplay.innerHTML = "<p>You scored a <b>" + score + "/3</b>.</p>"
+            }
+        }
+        
+        function playAgain() {
+            playAgainBtn.style.opacity = "0";
+            playAgainBtn.style.left = "80.5%";
+            submitBtn.style.left = "45%";
+
+            q1.innerHTML = "<p><hr> Question #1<hr>• How much water does the average human drink per year?<hr>Answer choices: <br> #1: 1400 liters<br> #2: 182.5 gallons<br> #3: 767.5 cups<br>#4: 10 tons</p>" + inputForm;
+            q2.innerHTML = "<p><hr> Question #2<hr>• What percent of the water on Earth is drinkable?<hr>Answer choices: <br> #1: 25%<br> #2: 100%<br> #3: 13.4%<br>#4: 0.4%</p>" + inputForm;
+            q3.innerHTML = "<p><hr> Question #3<hr>• How much water is wasted in America per year?<hr>Answer choices: <br> #1: 1 billion gallons<br> #2: 4 million gallons<br> #3: 1 trillion gallons<br>#4: 2 drops</p>" + inputForm;
+        }
+    </script>
+</html> 

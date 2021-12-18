@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a9af0714d8.js" crossorigin="anonymous"></script>
+
+        <title>Water Waste</title>
+        <div class="header"><h1>Water Waste</h1></div>
+        <button class="problemBtn" id="problemBtn"><i class="fas fa-hand-holding-water"></i></button>
+    </head>
+
+    <body>
+        <p style="text-align: center; position: absolute; left: 10.5%; top: 9%;"><i class="far fa-chart-bar" style="font-size: 3.5vw; text-align: center;"></i></p>
+        <p style="text-align: center; position: absolute; left: 35.5%; top: 9%;"><i class="fas fa-chart-line" style="font-size: 3.5vw; text-align: center;"></i></p>
+        <p style="text-align: center; position: absolute; left: 60.5%; top: 9%;"><i class="far fa-question-circle" style="font-size: 3.5vw; text-align: center;"></i></p>
+        <p style="text-align: center; position: absolute; left: 86%; top: 9%;"><i class="far fa-bell" style="font-size: 3.5vw; text-align: center;"></i></p>
+        <div class="statisticsDiv">
+            <p><hr>• The average family can waste 180 gallons of water per week. That's <b>9400 gallons of water a year</b>, enough to do your laundry <b>300 times</b>.
+            <br><hr>• Household water leaks waste approximately <b>900 billion</b> gallons of water per year, just in America.
+            <br><hr>• Running the dishwasher only while it's full instead of running it while half-full can save the average family nearly 320 gallons of water per year, enough for the average person to drink water for <b>one and a half years</b>.
+            <br><hr>• A lot of people (maybe including you!) keep the water on while brushing their teeth or shaving. If you turned the tap off while brushing your teeth or shaving, you could save 5700 gallons of water, enough to give an extra <b>31 people water for a year.</b></p>
+            <hr>
+        </div>
+        <div class="graphDiv">
+            <button class="zoomInButton" id="zoomInButton"><i class="fas fa-search-plus"></i></button>
+            <img src="waterChart.png" style="width: 17vw;" id="waterChart"></image>
+            <img src="waterBarGraph.png" style="width: 17vw;" id="waterBarGraph"></image>
+            <img src="lineGraph.jpg" style="width: 17vw; height: 12vw;" id="lineGraph"></image>
+        </div>
+
+        <div id="imgModal" class="imageGallery">
+          <div class="imageGallery-content">
+            <div class="modal-header">
+              <span class="close" id="close">&times;</span>
+              <h2>Images</h2>
+            </div>
+            <div class="modal-body">
+                <img src="waterChart.png" style="width: 25vw;" id="waterChart"></image>
+                <img src="waterBarGraph.png" style="width: 25vw;"  id="waterBarGraph"></image>
+                <img src="lineGraph.jpg" style="width: 25vw;"  id="lineGraph"></image>
+            </div>
+          </div>
+        </div>
+
+        <div id="problemModal" class="theProblem">
+            <div class="theProblem-content">
+              <div class="modal2-header">
+                <span class="close2" id="close2">&times;</span>
+                <h2>The Problem</h2>
+              </div>
+              <div class="modal2-body">
+                <p style="font-size: 1.25vw;">As humans, we waste too much water, and if we continue to waste water, everyone will not be able to get clean water to drink. Even right now, people within certain third-world countries such as Ethiopia don't have access to clean water. Up to 1 in 3 people don't have clean water, and it's time we changed that. The purpose of this website is to educate and inform you about the situation and tell you how you can help.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="supportDiv">
+            <p>• If nothing is down about this problem, many places won't have water to drink within the near future. According to a U.S. government report in <i>2014</i>, 40 out of 50 state managers expect water shortages in parts of their state. That's only <b>3 years</b> from now.
+            <br><hr><font size="4vw"><b>Ways you can get involved:</b> </font>
+            <br>• Turn off the water while brushing your teeth or shaving.<br>
+            • Take shorter showers - this doesn't mean you have to be unsanitary...just, try not to stand there for an hour.<br>
+            • If your family can afford it, try to switch to <a href="https://www.epa.gov/watersense/watersense-products" target="_blank">WaterSense</a> or <a href="https://www.energystar.gov/" target="_blank">ENERGY STAR</a> appliances! They are more energy-friendly and can help you conserve up to 13,000 gallons of water yearly. </p>
+        </div>
+        <div class="triviaDiv">
+            <p> Wanna test your skills and have fun? Try out the trivia below! </p><button class="trivia" onClick="location.href='trivia.html'">Trivia</button>
+            <br>
+            <hr>
+            <p style="text-align: left;">
+                All information was been obtained from the trustworthy sources below:<br><br>
+                • <a href="https://www.epa.gov/watersense/statistics-and-facts" target="_blank">Environmental Protection Agency</a><br>
+                • <a href="https://www.gao.gov/products/gao-14-430" target="_blank">U.S. Government Accountability Office</a><br>
+                • <a href="https://watertalks.csusb.edu/how-much-water-do-people-use#:~:text=Water%20Consumption%20How%20Much%20Water%20Does%20One%20Person,gallon%20per%20day%20and%20182.5%20gallons%20per%20year." target="_blank">Watertalks</a><br>
+                • <a href="https://www.wrsc.org/attach_image/global-water-consumption-1900-2025" target="_blank">World Resources Center</a>
+            </p>
+        </div>
+        <div class="dividerA"></div>
+        <div class="dividerB"></div>
+        <div class="dividerC"></div>
+
+        <div class="footer">QuHacks 2021 - Aryan Sharma</div>
+        <script>
+            var modal = document.getElementById("imgModal");
+            var btn = document.getElementById("zoomInButton");
+            var span = document.getElementById("close");
+            btn.onclick = function() {
+                modal.style.display = "block";
+                }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            var modal2 = document.getElementById("problemModal");
+            var btn2 = document.getElementById("problemBtn");
+            var span2 = document.getElementById("close2");
+            btn2.onclick = function() {
+                modal2.style.display = "block";
+                }
+            span2.onclick = function() {
+                modal2.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal2.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html> 
